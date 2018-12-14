@@ -106,3 +106,8 @@ themesDir = "../.."
     categories = true
     tags = true
     tag_cloud = true
+    profile = false
+
+# Enable and disable 2 columns layout
+[params.twocolumns]
+    enable_twocolumns = false
