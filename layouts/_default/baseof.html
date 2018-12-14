@@ -4,11 +4,11 @@
 	{{ partialCached "header" . }}
    	
    	<div class="outer">
-   	{{ if not .Params.disable_profile }}
-    	{{ partialCached "profile" . }}
+   	{{ if not (or (.Params.disable_profile) (.Site.Params.twocolumns.enable_twocolumns) ) }}
+    	    {{ partialCached "profile" . }}
     {{ end }}
 
-    <section id="main">
+    <section id="main"{{ if .Site.Params.twocolumns.enable_twocolumns }} class="twocolumns" {{ end }}>
     {{ block "main" . }}{{ end }}
     </section>
 

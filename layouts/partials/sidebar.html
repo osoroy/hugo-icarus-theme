@@ -1,4 +1,7 @@
 <aside id="sidebar">
+    {{ if .Site.Params.widgets.profile }}
+        {{ partial "profile" . }}
+    {{ end }}
     {{ partial "widgets/recent_articles" . }}
     {{ partial "widgets/categories" . }}
     {{ partial "widgets/tags" . }}
